@@ -26,6 +26,8 @@ class DatabaseConfig(BaseModel):
 class CorsConfig(BaseModel):
     cors_origins: list[str] = ["http://localhost:3000"]
     cors_methods: list[str] = ["*"]
+    cors_headers: list[str] = ["*"]
+    cors_credentials: bool = True
 
 
 class Settings(BaseSettings):

@@ -23,6 +23,8 @@ main_app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors.cors_origins,
     allow_methods=settings.cors.cors_methods,
+    allow_headers=settings.cors.cors_headers,
+    allow_credentials=settings.cors.cors_credentials,
 )
 
 if __name__ == "__main__":
